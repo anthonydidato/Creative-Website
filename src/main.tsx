@@ -3,7 +3,7 @@ import {createRoot} from 'react-dom/client';
 import App from './App';
 import './index.css';
 
-// The pinned stages depend on scroll position; always start at the top.
+// Start fresh page visits at the top.
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 
 createRoot(document.getElementById('root')!).render(

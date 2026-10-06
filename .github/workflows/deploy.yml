@@ -1,4 +1,4 @@
-name: Deploy SELENE to GitHub Pages
+name: Deploy Android Cafe Mug to GitHub Pages
 
 on:
   push:
