@@ -1,4 +1,4 @@
-name: Deploy Android Cafe Mug to GitHub Pages
+name: Deploy FreshKeep to GitHub Pages
 
 on:
   push:
