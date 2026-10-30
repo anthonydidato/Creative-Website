@@ -8,5 +8,6 @@ export default defineConfig({
   build: {
     // Frame sequence and loop video live in public/ and are served as-is.
     target: 'es2020',
+    rollupOptions: {input: {home: 'index.html', pricing: 'pricing.html'}},
   },
 });

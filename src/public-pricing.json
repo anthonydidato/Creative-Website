@@ -1,0 +1,21 @@
+{
+  "ventureName": "FreshKeep Smart Fridge",
+  "products": [
+    {
+      "name": "FreshKeep Smart Fridge",
+      "description": "A full refrigerator concept with food-temperature information, freshness reminders, preservation guidance and automatic cooling adjustments.",
+      "price": 3500,
+      "currency": "USD",
+      "billingModel": "One-time purchase",
+      "unit": "full refrigerator",
+      "features": [
+        "Proposed food-information display",
+        "Proposed freshness reminders",
+        "Proposed preservation guidance",
+        "Proposed automatic cooling adjustment"
+      ],
+      "addons": "None proposed",
+      "claimsStatus": "Concept; performance not validated"
+    }
+  ]
+}

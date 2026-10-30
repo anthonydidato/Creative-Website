@@ -1,4 +1,6 @@
 import {useState} from 'react';
+import {SiteHeader} from './components/SiteHeader';
+import pricing from './public-pricing.json';
 const foods = [
   {name:'Plain yogurt',temperature:'37°F',note:'Check the package date',detail:'Keep the package date and opening date visible when planning your next breakfast.'},
   {name:'Leafy greens',temperature:'38°F',note:'Plan your next meal',detail:'Bring the produce drawer into your meal planning so groceries are easier to remember.'},
@@ -12,10 +14,7 @@ export default function App() {
   return (
     <>
       <a className="skip" href="#main">Skip to content</a>
-      <header className="header">
-        <a className="brand" href="#" aria-label="FreshKeep home"><span className="brand-icon">f<span>•</span></span> freshkeep</a>
-        <nav aria-label="Main navigation"><a href="#details">The concept</a><a href="#demo">Try the display</a><a className="nav-cta" href="#details">Take a closer look <span>↗</span></a></nav>
-      </header>
+      <SiteHeader />
       <main id="main">
         <section className="hero" aria-labelledby="product-title">
           <div className="hero-copy">
@@ -46,6 +45,7 @@ export default function App() {
           <div className="food-display" aria-live="polite"><p className="eyebrow">SIMULATED FOOD STATUS</p><h3>{food.name}</h3><div className="food-readings"><div><small>Example temperature</small><strong>{food.temperature}</strong></div><div><small>Planning reminder</small><strong>{food.note}</strong></div></div><p>{food.detail}</p><button className="button" onClick={()=>setPlanned(items=>items.includes(selected)?items.filter(i=>i!==selected):[...items,selected])}>{planned.includes(selected)?'Remove from meal plan −':'Add to meal plan +'}</button><p className="plan-status" role="status">{planned.length?'Demo meal plan: '+planned.map(i=>foods[i].name).join(', '):'Select foods to create a demo meal plan.'} Selections reset when you reload.</p></div>
         </section>
         <section className="research section"><p className="eyebrow">03 / THE THINKING BEHIND FRESHKEEP</p><h2>Designed around everyday concerns.</h2><p className="muted">The venture workspace reports longevity and repair experiences as recurring concerns in a small sample of 30 Reddit observations. These findings inform our product priorities; they are not representative estimates of customer demand.</p><a className="text-link" href="https://usda-nutrient-charts-2026.rainy-toad-6210.chatgpt.site/#research">Explore the venture research ↗</a><p className="concept-note">FreshKeep is a student venture concept, not a product available for purchase. Freshness predictions, automatic cooling, and preservation performance have not been validated. This demo cannot determine whether food is safe to eat.</p></section>
+        <section className="pricing-teaser section"><div><p className="eyebrow">04 / EXPLORE THE PRICE</p><h2>One fridge. A clearer starting point.</h2><p className="muted">{pricing.products[0].name} · {new Intl.NumberFormat('en-US',{style:'currency',currency:pricing.products[0].currency,maximumFractionDigits:0}).format(pricing.products[0].price)} USD · One-time purchase. A concept, not yet available for purchase.</p></div><a className="button" href="pricing.html">Explore pricing <span>↗</span></a></section>
         <section className="closing"><p className="eyebrow">YOUR FOOD. YOUR ROUTINE. YOUR FRESHKEEP.</p><h2>Make more of what’s inside.</h2><a className="button dark-button" href="#product-title">Explore FreshKeep <span>↑</span></a></section>
       </main>
       <footer><a className="footer-brand" href="#">freshkeep<span className="green">.</span></a><p>Anthony Didato · MKTG 1101 · Product concept</p><a href="#main">Back to top ↑</a></footer>
