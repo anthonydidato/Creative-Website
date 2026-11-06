@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectName": "FreshKeep · Sage edition",
+  "modelName": "FreshKeep · Sage edition",
+  "modelType": "Physical product",
+  "confirmationTimestamp": "2026-11-06T19:47:51.135Z",
+  "revision": 12,
+  "dimensions": {
+    "width": 0.800000011920929,
+    "height": 1.855500026077032,
+    "depth": 0.8325000011101364,
+    "units": "meters"
+  },
+  "coordinateSystem": {
+    "up": "+Y",
+    "front": "+Z"
+  },
+  "preferredCamera": {
+    "preset": "isometric",
+    "target": [
+      0,
+      0.9322500131875276,
+      0.016250000339001397
+    ],
+    "fieldOfViewDegrees": 35
+  },
+  "preferredBackground": "#e9ece5",
+  "preferredLighting": "Soft studio",
+  "description": "FreshKeep smart refrigerator with a food status display, freshness reminders, and a lower freezer drawer. Procedural design interpretation of the Mission 1 concept.",
+  "featureHotspots": [],
+  "files": {
+    "model": "model.glb",
+    "project": "project.json",
+    "preview": "preview.png",
+    "readme": "README.txt"
+  },
+  "integrity": {
+    "algorithm": "SHA-256",
+    "file": "model.glb",
+    "value": "173336a79fdceb63d7776f2cf1d392823dac488f5f4b6f71da1a4275b265f673"
+  },
+  "validation": {
+    "reimported": true,
+    "meshCount": 22,
+    "dimensions": [
+      0.800000011920929,
+      1.855500026077032,
+      0.8325000011101364
+    ]
+  },
+  "modelingMethod": "Editable procedural interpretation. Not automatic image reconstruction."
+}

@@ -34,6 +34,15 @@ jobs:
         run: npm run lint
       - name: Build
         run: npm run build
+      - name: Install studio dependencies
+        run: npx --yes pnpm@11.25.0 --dir studio install --frozen-lockfile --ignore-scripts
+      - name: Test editable templates
+        run: node --experimental-strip-types studio/tests/templates.mjs
+      - name: Build Mission 2 studio
+        run: |
+          npx --yes pnpm@11.25.0 --dir studio run build
+          mkdir -p dist/studio
+          cp -R studio/dist/. dist/studio/
       - name: Configure Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
       - name: Upload site
